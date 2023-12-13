@@ -3,6 +3,7 @@
     --color-biege-2: #da9f72;
     --color-biege-3: #da9f72;
     --color-biege-4: #da9f72;
+    --section-background: #ECA37E;
     --raindrop-color-bg:var(--color-biege-1);
     --raindrop-color-text:var(--color-black-1);
     }
@@ -452,6 +453,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     padding: 120px;
+    justify-content: center;
 }
 
 footer section {
@@ -490,65 +492,78 @@ footer a {
     margin: 0 10px;
 }
 
-/*sanal setgegdl */
+.terms{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div a img{
+    width: 30px;
+    height: 30px;
+    margin: 10px 20px 10px 20px;
+}
+.contactLogo{
+    display: flex;
+}
+
+.miniHelp{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
 /* Style the user comment section */
 .user-comment {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    padding: 50px;
+    background-color: var(--section-background);
+    justify-content: center;
+}
+
+.user-comment article {
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  /* Style each user comment article */
-  .user-comment article {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    max-width: 600px; /* Set a max width for the articles container */
-  }
-  
-  /* Style the user profile picture button */
-  .user-comment button {
-    background: none;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.user-comment button{
+    background-color: transparent;
     border: none;
-    cursor: pointer;
-  }
-  
-  .user-comment button img {
-    width: 80px; /* Adjust the width to your preference */
-    height: 80px; /* Adjust the height to your preference */
-    border-radius: 50%; /* Round the profile picture */
-  }
-  
-  /* Style the user comment text */
-  .user-comment p {
-    margin: 0 10px; /* Add space around the text */
-    word-wrap: break-word; /* Wrap long text */
-  }
-  
-  /* Style the username */
-  .user-comment p:last-child {
+}
+
+.comment{
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    padding-top: 55px;
+    z-index: 0;
+}
+
+.name{
     font-weight: bold;
-    color: #007BFF; /* Customize the username color */
-  }
-  
-  /* Style the navigation buttons */
-  .user-comment #prevBtn,
-  .user-comment #nextBtn {
-    background: #007BFF; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    padding: 5px 10px;
-    margin: 10px;
-    cursor: pointer;
-  }
-  
-  .user-comment #prevBtn:hover,
-  .user-comment #nextBtn:hover {
-    background: #0056b3; /* Change color on hover */
-  }
-  
+}
 
+.user-comment article img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    z-index: 1;
+}
 
+.user-comment article p {
+    text-align: center;
+    margin: 10px 0;
+}
    
 
  

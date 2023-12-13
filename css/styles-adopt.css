@@ -3,6 +3,8 @@
     --color-biege-2: #da9f72;
     --color-biege-3: #da9f72;
     --color-biege-4: #da9f72;
+    --text-background: #FFF5D4;
+    --button-background: #d94d3a;
     --raindrop-color-bg:var(--color-biege-1);
     --raindrop-color-text:var(--color-black-1);
     }
@@ -17,19 +19,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding-top: 150px; 
 }
 main {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: space-between; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  min-height: 100vh; /* Ensure it takes up at least the full viewport height */
+  min-height: 100vh;
 }
-aside {
-  width: 30%; /* Adjust the width as needed */
-  padding: 20px;
-}
+
 @media screen and (max-width: 768px) {
     nav .menu-button {
       display: block;
@@ -117,12 +117,6 @@ nav img {
     margin-left: 40px;
 }
 
-
-body {
-    padding-top: 150px; 
-}
-
-
 /*background animation*/
 
 .raindrop,.raindrop-1,.raindrop-2,.raindrop-3{
@@ -172,100 +166,80 @@ body {
     }
 }
 
-section{
-    justify-content: center;
+nav .menu-button {
+  display: none; /* Hide the burger menu button */
 }
 
-/* Styles for larger screens */
+nav .nav-links {
+  list-style: none;
+  display: flex;
+}
 
- 
-  /* Media query for mobile screens */
-  @media screen and (max-width: 768px) {
+nav .nav-links li {
+  margin-right: 20px;
+}
 
-  
-    .poster section {
-      text-align: center; /* Center-align text */
-    }
-  
-    .poster img {
-      order: 1; /* Move the image below the section */
-      max-width: 200%; /* Ensure the image stays within the container */
-    }
-  
-    h1 {
-      font-size: 20px; /* Adjust the font size as needed */
-    }
-    .duudlaga-button{
-        width: 350px;
-    }
-    .tbuttons{
-        width: 350px;
-    }
-
-  }
-
-
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
   nav .menu-button {
-    display: none; /* Hide the burger menu button */
+    display: block; /* Show the burger menu button */
+    margin-left: auto;
+    cursor: pointer;
   }
-  
+
   nav .nav-links {
-    list-style: none;
-    display: flex;
+    display: none; /* Hide the navigation links */
+    flex-direction: column;
+    background-color: #333; /* Background color for the mobile menu */
+    position: absolute;
+    top: 60px; /* Adjust this value as needed to position the menu below the navigation bar */
+    left: 0;
+    width: 100%;
+    padding: 10px;
   }
-  
+
   nav .nav-links li {
-    margin-right: 20px;
+    margin: 10px 0;
   }
 
-  /* Media query for mobile screens */
-  @media screen and (max-width: 768px) {
-    nav .menu-button {
-      display: block; /* Show the burger menu button */
-      margin-left: auto;
-      cursor: pointer;
-    }
-  
-    nav .nav-links {
-      display: none; 
-      flex-direction: column;
-      background-color: #333;
-      position: absolute;
-      top: 60px; 
-      left: 0;
-      width: 100%;
-      padding: 10px;
-    }
-  
-    nav .nav-links li {
-      margin: 10px 0;
-    }
-  
-    nav.open .nav-links {
-      display: flex; 
-    }
+  nav.open .nav-links {
+    display: flex; /* Show the navigation links when the menu is open */
   }
-  /* haij bn heseg*/
-   .slider-container {
-    width: 60%; 
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    & button{
-        border: none ;
-        
-
-    }
 }
-form {
+/* haij bn heseg*/
+.slider-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 50px;
+  text-align: center;
+  position: relative;
+  & button{
+      border: none ;
+      
+
+  }
+}
+
+#found{
+  padding: 15px;
   border-radius: 15px;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: solid 2px #DB5947;
+  background-color: var(--button-background);
+  width: 200px;
+  border: 0;
+}
+
+#found a{
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.title{
+  width: 100%;
+  text-align: center;
+  background-color: var(--text-background);
+  padding: 20px;
 }
 
 .slider {
@@ -280,21 +254,19 @@ main::after {
 }
 
 .slide {
-    box-sizing: border-box;
-    border: solid 1px #c3bfbf;
+  box-sizing: border-box;
+    border: solid 1px var(--button-background);
     border-radius: 15px;
-    padding: z;
     margin: 15px;
     width: 250px;
-
-    & p{
-        font-size: 18px;
-        padding: 0;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin: 0;
-    }
-    
+    padding: 5px 0;
+  & p{
+      font-size: 18px;
+      padding: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 0;
+  }
 }
 .slide img {
     max-width: 100%;
@@ -317,116 +289,91 @@ button {
     width: 200px;
     font-weight: 600;
     font-size: 20px;
+    color: white;
     font-family: 'Montserrat', sans-serif;
     margin: 5px;
 }
 
 /* footer */
 footer {
-    background-color: #251B13;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 120px;
+  background-color: #251B13;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 120px;
+  justify-content: center;
 }
 
 footer section {
-    flex: 1;
-    text-align: center;
-    margin: 0 20px;
+  flex: 1;
+  text-align: center;
+  margin: 0 20px;
 }
 
 footer section h3 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 footer section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 footer section ul li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 footer p {
-    text-align: center;
-    clear: both;
-    margin: 20px 0;
+  text-align: center;
+  clear: both;
+  margin: 20px 0;
 }
 
 footer .social-icons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
-/*sanal setgegdl */
-/* Style the user comment section */
-.user-comment {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Style each user comment article */
-  .user-comment article {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    max-width: 600px; /* Set a max width for the articles container */
-  }
-  
-  /* Style the user profile picture button */
-  .user-comment button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .user-comment button img {
-    width: 80px; /* Adjust the width to your preference */
-    height: 80px; /* Adjust the height to your preference */
-    border-radius: 50%; /* Round the profile picture */
-  }
-  
-  /* Style the user comment text */
-  .user-comment p {
-    margin: 0 10px; /* Add space around the text */
-    word-wrap: break-word; /* Wrap long text */
-  }
-  
-  /* Style the username */
-  .user-comment p:last-child {
-    font-weight: bold;
-    color: #007BFF; /* Customize the username color */
-  }
-  
-  /* Style the navigation buttons */
-  .user-comment #prevBtn,
-  .user-comment #nextBtn {
-    background: #007BFF; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    padding: 5px 10px;
-    margin: 10px;
-    cursor: pointer;
-  }
-  
-  .user-comment #prevBtn:hover,
-  .user-comment #nextBtn:hover {
-    background: #0056b3; /* Change color on hover */
-  }
-  
+.terms{
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
+div a img{
+  width: 30px;
+  height: 30px;
+  margin: 10px 20px 10px 20px;
+}
+.contactLogo{
+  display: flex;
+}
+
+.miniHelp{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+}
+
+#content{
+  display: flex;
+}
+
+#petSortingForm{
+  margin-right: 50px;
+  border: 1px rgb(102, 102, 102);
+}
 
    
 
