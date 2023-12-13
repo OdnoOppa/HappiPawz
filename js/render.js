@@ -13,6 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
         { type: "муур", sex: "эм", status: "үрчлэх", date: "2023.11.01", image: "../assets/pet-pic/muur7.png", location: "Сүхбаатар" },
         
     ];
+    function sortPets() {
+        const animalSorter = document.querySelector('animal-sorter');
+        const type = document.getElementById('animal').value;
+        const sex = document.getElementById('sex').value;
+        const status = document.getElementById('status').value;
+        const date = document.getElementById('sortDate').value;
+        const location = document.getElementById('location').value;
+
+        // Call the sortPets method of the custom element
+        animalSorter.sortPets(type, sex, status, date, location);
+    }
   // html dynamic generation
     function generatePetHTML(animal) {
         return `
@@ -27,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
         `;
     }
 
-    // Function to populate the slider with dynamic content
     function populateSlider() {
         const petSlider = document.getElementById("pet-slider");
         petSlider.innerHTML = '';
@@ -37,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
             const currentRow = document.createElement('div');
             currentRow.classList.add('row');
 
-            // Loop through the next 3 animals or less if it's the last row
             for (let j = i; j < i + 3 && j < animalData.length; j++) {
                 const petHTML = generatePetHTML(animalData[j]);
                 currentRow.innerHTML += petHTML;
@@ -49,4 +58,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     populateSlider();
+    window.sortPets = sortPets;
 });
