@@ -1,4 +1,4 @@
-//render.js
+//render.jsz
 document.addEventListener("DOMContentLoaded", function() {
     // Animal data JSON
     const animalData = [
