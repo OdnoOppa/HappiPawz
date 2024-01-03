@@ -19,16 +19,12 @@ section {
     align-items: center;
 }
 
-.column {
-    display: inline-block;
-    width: 45%;
-    vertical-align: middle;
-}
+
 
 section img {
     position: relative;
-    top: -19%;
-    left: 35%;
+    top: -35%;
+    left: 15%;
     width: 80px;
     height: 65px;
 }
@@ -68,14 +64,15 @@ section form a {
     text-decoration: underline;
     margin: 10px 0;
     font-size: 14px;
-    left: 250px;
+
+  
 }
 
 /* Set button background color to yellow and make text bold */
 section form button {
     width: 200px;
     position: relative;
-    left: 30%;
+   
     background-color: var(--button-color);
     border: none;
     padding: 10px 20px;
