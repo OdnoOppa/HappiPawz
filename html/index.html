@@ -36,8 +36,23 @@
             <li><a href="advice.html">Зөвлөмж</a></li>
             <li><a href="about">Тухай</a></li>
         </ul>
+        <button class="darkmode">Darkmode</button>
         <button class="signin-button"><a href="sign_in.html">Нэвтрэх</a></button>
     </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    
+            function toggleDarkMode() {
+                document.body.classList.toggle("dark-mode");
+            }
+    
+           
+            var darkModeButton = document.querySelector(".darkmode");
+    
+           
+            darkModeButton.addEventListener("click", toggleDarkMode);
+        });
+    </script>
     
     <main>
         <div class="poster">
@@ -172,6 +187,7 @@
     </footer>
   
     <link rel="stylesheet" href="../js/script.js">
+    <link rel="stylesheet" href="../js/darkmode.js">
 </body>
 
 </html>

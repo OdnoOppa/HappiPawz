@@ -1,15 +1,17 @@
 <link rel="stylesheet" href="../css/styles-signin.css">
 <section class="signin-container">
     <img src="../assets/sign_in_dog_pic.png" alt="catdog" class="sign-in-image">
-    <form class="signin">
+    <form class="signin" id="loginForm">
         <h4>НЭВТРЭХ</h4>
-        <input type="text" placeholder="И-Мэйл хаяг">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="username" required>
         <br>
-        <input type="password" placeholder="Нууц үг">
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="password" required>
         <br>
         <a class="forget" href="#">Нууц үг ээ мартсан?</a>
         <br>
-        <button class="sub"><a href="index.html">НЭВТРЭХ</a></button>
+        <button class="sub" type="submit">НЭВТРЭХ</a></button>
         <br>
         <button class="reg"><a href="sign_up.html">БҮРТГҮҮЛЭХ</a></button>
     </form>

@@ -1,19 +1,19 @@
 <link rel="stylesheet" href="../css/styles-signup.css">
 <section>
     <img src="../assets/sign_up_pic.png" alt="catdog">
-    <form>
+    <form id="signupForm">
         <h4>БҮРТГҮҮЛЭХ</h4>
-        <div class="column">
-            <input type="text" placeholder="Утасны дугаар"><br>
-            <input type="email" placeholder="Email"><br>
-            <input type="Нэр" placeholder="Нэр"><br>
-        </div>
-        <div class="column">
-            <input type="text" placeholder="Утасны дугаар"><br>
-            <input type="password" placeholder="Нууц үг"><br>
-            <input type="password" placeholder="Нууц үг давтан оруулах"><br>
-        </div>
-        <button>БҮРТГҮҮЛЭХ</button><br>
-        <a href="sign_in.html"> Нэвтрэх</a>
+
+            <label for="signupUsername">Username:</label>
+    <input type="text" id="signupUsername" name="username" required>
+    <br>
+    <label for="signupPassword">Password:</label>
+    <input type="password" id="signupPassword" name="password" required>
+    <br>
+    <button type="submit">БҮРТГҮҮЛЭХ</button><br>
+    <a href="sign_in.html"> Нэвтрэх</a>
+      
+       
     </form>
 </section>
+
